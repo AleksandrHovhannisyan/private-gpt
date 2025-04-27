@@ -97,8 +97,11 @@ huggingface:
   # Nomic AI requires this option to be enabled to use the model, be aware if you are using a different model.
   trust_remote_code: true
 
-vectorstore:
-  database: qdrant
+vectorstore: 
+  database: chroma
+
+chroma: 
+  path: local_data/private_gpt/chroma
 
 nodestore:
   database: simple
@@ -107,9 +110,6 @@ milvus:
   uri: local_data/private_gpt/milvus/milvus_local.db
   collection_name: milvus_db
   overwrite: false
-
-qdrant:
-  path: local_data/private_gpt/qdrant
 
 postgres:
   host: localhost
